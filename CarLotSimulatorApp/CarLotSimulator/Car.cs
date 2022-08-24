@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 
 namespace CarLotSimulator
 {
@@ -11,7 +12,12 @@ namespace CarLotSimulator
        
         public Car()
         {
+            //Create a static field called numberOfCars inside of the CarLot class
+            //Have this number only increment when we create a new car
 
+            CarLot.numberOfCars++;
+
+            // ^^ Classname . Static Member 
         }
 
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)

@@ -27,6 +27,7 @@ namespace CarLotSimulator
             myCar.HonkNoise = "weird";
             myCar.IsDriveable = true;
 
+            // , name of the collection , dot.Add , pass in the car:
             lot.Cars.Add(myCar); //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list. - NEEDED TO ADD THEM TO LOT LIST
 
             Console.WriteLine($" Here is your Car details: " +
@@ -78,11 +79,16 @@ namespace CarLotSimulator
             Console.WriteLine();
             Console.WriteLine();
 
+            Console.WriteLine($"Number of Cars created: {CarLot.numberOfCars}");
+
             foreach(var car in lot.Cars)
             {
                 Console.WriteLine($"Year: {car.Year}, Make:  {car.Make}, Model: {car.Model}, Engine Noise: " +
                     $"{car.EngineNoise}, Honk: {car.HonkNoise}, Drivable: {car.IsDriveable}");
             }
+
+            
+           
         }
     }
 }
